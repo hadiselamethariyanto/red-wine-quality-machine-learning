@@ -38,7 +38,7 @@ Solusi yang dapat dilakukan sebagai berikut :
 
 # Data Understanding & Removing Outlier
 
-![cover image](https://storage.googleapis.com/kaggle-datasets-images/4458/6836/30587db9a40233164f65a4a3f148f40d/dataset-cover.jpg?t=2017-11-12-14-28-34)
+![cover image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/dataset-cover.jpg)
 
 Dataset yang digunakan dalam proyek ini merupakan sample data uji fisiokimia dari Portugal utara. Dataset ini bisa didapatkan di [Kaggle: Red Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009).
 
