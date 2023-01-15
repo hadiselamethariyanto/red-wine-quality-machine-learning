@@ -98,3 +98,35 @@ Agar lebih jelas, mari kita lihat skor korelasi pada gambar dibawah ini.
 Karena skor residual sugar, pH, dan free sulfur dioxide sangat kecil, maka fitur tersebut kita drop.
 
 ![drop image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/drop.png)
+
+# Data Preparation
+
+- Train Test Split
+
+Train test split aja proses membagi data menjadi data latih dan data uji. Data latih akan digunakan untuk membangun model, sedangkan data uji akan digunakan untuk menguji performa model. Pada proyek ini dataset setelah outliers di drop sebesar 1179 dibagi menjadi 943 untuk data latih dan 236 untuk data uji.
+
+- Normalization
+
+Algoritma machine learning akan memiliki performa lebih baik dan bekerja lebih cepat jika dimodelkan dengan data seragam yang memiliki skala relatif sama. Salah satu teknik normalisasi yang digunakan pada proyek ini adalah Standarisasi dengan sklearn.preprocessing.StandardScaler.
+
+![standarisation image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/standard.png)
+
+# Modeling
+
+Algoritma Penelitian ini melakukan pemodelan dengan 3 algoritma, yaitu K-Nearest Neighbour, Random Forest, dan
+
+- K-Nearest Neighbour K-Nearest Neighbour bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat. Proyek ini menggunakan sklearn.neighbors.KNeighborsRegressor dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+
+  - n_neighbors = Jumlah k tetangga tedekat.
+
+- Random Forest Algoritma random forest adalah teknik dalam machine learning dengan metode ensemble. Teknik ini beroperasi dengan membangun banyak decision tree pada waktu pelatihan. Proyek ini menggunakan sklearn.ensemble.RandomForestRegressor dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+
+  - n_estimators = Jumlah maksimum estimator di mana boosting dihentikan.
+  - max_depth = Kedalaman maksimum setiap tree.
+  - random_state = Mengontrol seed acak yang diberikan pada setiap base_estimator pada setiap iterasi boosting.
+
+- Adaboost AdaBoost juga disebut Adaptive Boosting adalah teknik dalam machine learning dengan metode ensemble. Algoritma yang paling umum digunakan dengan AdaBoost adalah pohon keputusan (decision trees) satu tingkat yang berarti memiliki pohon Keputusan dengan hanya 1 split. Pohon-pohon ini juga disebut Decision Stumps. Algoritma ini bertujuan untuk meningkatkan performa atau akurasi prediksi dengan cara menggabungkan beberapa model sederhana dan dianggap lemah (weak learners) secara berurutan sehingga membentuk suatu model yang kuat (strong ensemble learner). Proyek ini menggunakan sklearn.ensemble.AdaBoostRegressor dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+
+  - n_estimators = Jumlah maksimum estimator di mana boosting dihentikan.
+  - learning_rate = Learning rate memperkuat kontribusi setiap regressor.
+  - random_state = Mengontrol seed acak yang diberikan pada setiap base_estimator pada setiap iterasi boosting.
