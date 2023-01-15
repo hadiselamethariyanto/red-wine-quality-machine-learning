@@ -62,6 +62,74 @@ Dataset yang digunakan dalam proyek ini merupakan sample data uji fisiokimia dar
 - Free Sulfur Dioxide: itu mencegah pertumbuhan mikroba dan oksidasi anggur
 - Residual sugar: adalah jumlah gula yang tersisa setelah fermentasi berhenti. Kuncinya adalah memiliki keseimbangan yang sempurna antara — manis dan asam (anggur > 45g/ltr manis)
 
+### visualisasi boxplot outliers
+
+![alcohol](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/alcohol.png)
+
+Viasualisasi outliers data alcohol
+
+![sulphates](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/sulphates.png)
+
+Visualisasi outliers data sulphates
+
+![ph](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/ph.png)
+
+Visualisasi outliers data pH
+
+![fixed acidity](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/fixed%20acidity.png)
+
+Visualisasi outliers data fixed acidity
+
+![volatile acidity](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/volatile%20acidity.png)
+
+Visualisasi outliers data volatile acidity
+
+![citric acid](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/citric%20acid.png)
+
+Visualisasi outliers data citric acid
+
+![residual sugar](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/residual%20sugar.png)
+
+Visualisasi outliers data residual sugar
+
+![chlorides](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/chlorides.png)
+
+Visualisasi outliers data chlorieds
+
+![free sulfur dioxide](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/free%20sulfur%20dioxide.png)
+
+Visualisasi outliers data free sulfur dioxide
+
+![total sulfur dioxide](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/total%20sulfur%20dioxide.png)
+
+visualisasi outliers data total sulfur dioxide
+
+![density](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/density.png)
+
+Visualisasi outliers data density
+
+![quality](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/quality.png)
+
+Visualisasi outliers data quality
+
+**Penanganan Outliers**
+
+Pada proyek ini , hampir seluruh variable memiliki outliers, untuk menangani outliers kita dapat menggunakan teknik IQR method. IQR adalah singkatan dari Interquartile Range. untuk memahami apa itu IQR, mari kita ingat lagi konsep kuartil. Kuartil dari suatu populasi adalah tiga nilai yang membagi distribusi data menjadi empat sebaran. Seperempat dari data berada di bawah kuartil pertama (Q1), setengah dari data berada di bawah kuartil kedua (Q2), dan tiga perempat dari data berada di kuartil ketiga (Q3). Dengan demikian interquartile range atau IQR = Q3 - Q1, untuk lebih jelasnya dapat diperhatikan pada bagian potongan code dibawah ini :
+
+Pada proyek ini digunakan IQR method untuk menangani outliers yang pertama definisikan dulu outliers pada Q1 atau batas bawah yaitu 0.25 lalu outliers pada Q3 atau batas atas yaitu 0.75 kemudian hasil Q3 akan dikurangi dengan hasil Q1 setelah itu buat variabel baru yaitu wine untuk menampung hasil batas bawah dari pengurangan Q1 dengan 1,5 _ IQR. lalu untuk hasil batas atas digunakan penambahan 1.5 _ IQR dengan Q3
+
+dan jika dibuat persamaan dapat dilihat sebagai berikut :
+
+---
+
+_Batas bawah = Q1 - 1.5 \* IQR_
+
+_Batas atas = Q3 + 1.5 \* IQR_
+
+---
+
+setelah itu untuk melihat ukuran hasil penanganan _outliers_, variabel _wine_ dapat dipanggil dengan **wine.shape**. hasil penanganan outliers menghasilkan data baru yaitu **(1179, 12)**
+
 ### Univariate Analysis
 
 Univariate Analysis adalah menganalisis setiap fitur secara terpisah.
