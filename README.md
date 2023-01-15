@@ -130,3 +130,31 @@ Algoritma Penelitian ini melakukan pemodelan dengan 3 algoritma, yaitu K-Nearest
   - n_estimators = Jumlah maksimum estimator di mana boosting dihentikan.
   - learning_rate = Learning rate memperkuat kontribusi setiap regressor.
   - random_state = Mengontrol seed acak yang diberikan pada setiap base_estimator pada setiap iterasi boosting.
+
+# Evaluation
+
+Metrik evaluasi yang digunakan pada proyek ini adalah akurasi dan mean squared error (MSE). Akurasi menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut formulan MSE :
+
+![MSE image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/mse.png)
+
+Keterangan:
+
+N = jumlah dataset
+yi = nilai sebenarnya
+y_pred = nilai prediksi
+
+Berikut ini Hasil evaluasi pada data latih dan data test setiap alogirtme.
+
+![evaluasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/evaluasi.png)
+
+Untuk memudahkan, mari kita plot metrik tersebut dengan bar chart.
+
+![akurasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/akurasi.png)
+
+Dari gambar diatas kitab isa melihat bahwa model Random Forest (RF) memiliki nilai error paling kecil dengan tingkat akurasi yang baik, disusul dengan model Boosting. Sedangkan model KNN memiliki nilai error yang tinggi dan tingkat akurasi yang kurang baik.
+
+Untuk mengujinya, mari kita buat prediksi menggunakan beberapa harga dari data test.
+
+![result image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/result.png)
+
+Pada gambar diatas terlihat bahwa model Random Forest (RF) memberikan nilai yang sama dengan nilai aslinya, sedangkan model Boosting memberikan nilai dengan selisih sedikit, dan untuk model KNN memiliki nilai yang cukup jauh berbeda.
