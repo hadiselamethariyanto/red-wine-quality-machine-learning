@@ -32,7 +32,7 @@ Berdasarkan latar belakang di atas, berikut ini batasan masalah yang dapat disel
 Solusi yang dapat dilakukan sebagai berikut :
 
 - Menganalisis data dengan melakukan univariate analysis dan multivariate analysis. Memahami data juga dapat dilakukan dengan visualisasi. Memahami data dapat membantu untuk mengetahui kolerasi antar fitur dan mendeteksi outlier.
-- Membandingkan hasil dari tiga algoritma _machine learning_, yaitu KNN, Random Forest dan Adaboost
+- Membuat model dengan tiga algoritma _machine learning_, yaitu KNN, Random Forest dan Adaboost
 
 ---
 
