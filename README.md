@@ -240,8 +240,10 @@ Berikut ini Hasil evaluasi pada data latih dan data test setiap alogirtme.
 
 Untuk memudahkan, mari kita plot metrik tersebut dengan bar chart.
 
-![akurasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/akurasi.png)
-Gambar 17
+|![akurasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/akurasi.png)
+|
+|:--:|
+| _Gambar 17_ |
 
 Dari gambar diatas kitab isa melihat bahwa model Random Forest (RF) memiliki nilai error paling kecil dengan tingkat akurasi yang baik, disusul dengan model Boosting. Sedangkan model KNN memiliki nilai error yang tinggi dan tingkat akurasi yang kurang baik.
 
