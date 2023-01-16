@@ -79,42 +79,52 @@ pada Gambar 3 dapat dilihat bahwa boxplot **sulphates** terdapat indikasi outlie
 
 ![ph](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/ph.png)
 Gambar 4
+
 pada Gambar 4 dapat dilihat bahwa boxplot **pH** terdapat indikasi outliers.
 
 ![fixed acidity](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/fixed%20acidity.png)
 Gambar 5
+
 pada Gambar 5 dapat dilihat bahwa boxplot **fixed acidity** terdapat indikasi outliers.
 
 ![volatile acidity](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/volatile%20acidity.png)
 Gambar 6
+
 pada Gambar 6 dapat dilihat bahwa boxplot **volatile acidity** terdapat indikasi outliers.
 
 ![citric acid](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/citric%20acid.png)
 Gambar 7
+
 pada Gambar 7 dapat dilihat bahwa boxplot **citric acid** terdapat indikasi outliers.
 
 ![residual sugar](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/residual%20sugar.png)
 Gambar 8
+
 pada Gambar 8 dapat dilihat bahwa boxplot **residual sugar** terdapat indikasi outliers.
 
 ![chlorides](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/chlorides.png)
 Gambar 9
+
 pada Gambar 9 dapat dilihat bahwa boxplot **chlorieds** terdapat indikasi outliers.
 
 ![free sulfur dioxide](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/free%20sulfur%20dioxide.png)
 Gambar 10
+
 pada Gambar 10 dapat dilihat bahwa boxplot **free sulfur dioxide** terdapat indikasi outliers.
 
 ![total sulfur dioxide](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/total%20sulfur%20dioxide.png)
 Gambar 11
+
 pada Gambar 11 dapat dilihat bahwa boxplot **total sulfure dioxide** terdapat indikasi outliers.
 
 ![density](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/density.png)
 Gambar 12
+
 pada Gambar 12 dapat dilihat bahwa boxplot **density** terdapat indikasi outliers.
 
 ![quality](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/quality.png)
 Gambar 13
+
 pada Gambar 13 dapat dilihat bahwa boxplot **quality** terdapat indikasi outliers.
 
 **Penanganan Outliers**
@@ -139,12 +149,12 @@ setelah itu untuk melihat ukuran hasil penanganan _outliers_, variabel _wine_ da
 
 Univariate Analysis adalah menganalisis setiap fitur secara terpisah.
 
-Karena pada dataset tidak ada data kategorik, maka kita langsung menganalisis sebaran pada setiap fitur numerik dengan melihat histogram masing-masing fiturnya.
+Karena pada dataset tidak ada data kategorik, bisa langsung menganalisis sebaran pada setiap fitur numerik dengan melihat histogram masing-masing fiturnya.
 
 ![univarate image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/univariete.png)
 Gambar 14
 
-Mari kita lihat histogram diatas, khususnya variable ‘quality’ yang menjadi target pada data kita.
+lihatlah histogram diatas, khususnya variable ‘quality’ yang menjadi target pada data.
 
 - Rata-rata kualitas wine berada di angka 5 dan 6
 - Bisa dilihat pH level anggur merah selalu berada di angka 3-3.8
@@ -158,20 +168,20 @@ Multivariate Analysis menunjukkan hubungan antara dua atau lebih fitur dalam dat
 ![multivariate image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/multivariate.png)
 Gambar 15
 
-Dari pola sebaran data(titik-titik) pada gambar diatas, kita bisa melihat adanya 3 pola yang terbentuk, yaitu positive, negative dan pola acak yang artinya tidak memiliki korelasi apapun.
+Dari pola sebaran data(titik-titik) pada gambar 15, bisa dilihat adanya 3 pola yang terbentuk, yaitu positive, negative dan pola acak yang artinya tidak memiliki korelasi apapun.
 
-Untuk pola positif, kita bisa melihat hubungan yang positif antara critical acid, alcohol dan sulphates. Meskipun anggur merah dengan kandungan alcohol yang lebih tinggi kurang popular, akan tetapi mereka memiliki kualitas yang bagus.
+Untuk pola positif, bisa dilihat hubungan yang positif antara critical acid, alcohol dan sulphates. Meskipun anggur merah dengan kandungan alcohol yang lebih tinggi kurang popular, akan tetapi mereka memiliki kualitas yang bagus.
 
 Untuk pola negative, variable volatile acidity, density, total sulfur dioxide dan cholireds memiliki pola negative dengan kualitas. Ini sangat masuk akal karena anggur merah yang kurang manis dan tingkat keasaman yang lebih rendah lebih disukai dalam pengujian kualitas.
 
 Untuk pola acak, residual sugar, pH, dan free sulfur dioxide tidak memiliki kolerasi apapun dengan kualitas.
 
-Agar lebih jelas, mari kita lihat skor korelasi pada gambar dibawah ini.
+Agar lebih jelas, lihat skor korelasi pada gambar dibawah ini.
 
 ![korelasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/korelasi.png)
 Gambar 16
 
-Karena skor residual sugar, pH, dan free sulfur dioxide sangat kecil, maka fitur tersebut kita drop.
+Karena skor residual sugar, pH, dan free sulfur dioxide sangat kecil, maka fitur tersebut perlu drop.
 
 |     | fixed acidity | volatile acidity | citric acid | chlorides | total sulfur dioxide | density | sulphates | alcohol | quality |
 | --- | ------------- | ---------------- | ----------- | --------- | -------------------- | ------- | --------- | ------- | ------- |
@@ -180,6 +190,8 @@ Karena skor residual sugar, pH, dan free sulfur dioxide sangat kecil, maka fitur
 | 2   | 7.8           | 0.76             | 0.04        | 0.092     | 54.0                 | 0.9970  | 0.65      | 9.8     | 5       |
 | 3   | 11.2          | 0.28             | 0.56        | 0.075     | 60.0                 | 0.9980  | 0.58      | 9.8     | 6       |
 | 4   | 7.4           | 0.70             | 0.00        | 0.076     | 34.0                 | 0.9978  | 0.58      | 9.4     | 5       |
+
+Table 1
 
 # Data Preparation
 
@@ -198,6 +210,8 @@ Algoritma machine learning akan memiliki performa lebih baik dan bekerja lebih c
 | 317  | 0.046702  | 0.082209  | 1.275323  | 1.211081             | 0.229898  | -0.695412   | 1.472232         | 1.000060      |
 | 940  | 2.105431  | 1.127465  | -0.927681 | -0.666596            | -0.323854 | 1.533593    | -1.193992        | 1.000060      |
 | 433  | -0.879727 | -1.224360 | 2.358260  | -0.934836            | 0.852871  | 2.146570    | -0.830416        | 2.860947      |
+
+Table 2
 
 # Modeling
 
@@ -238,12 +252,14 @@ Berikut ini Hasil evaluasi pada data latih dan data test setiap alogirtme.
 | RF       | 0.000046 | 0.000774 |
 | Boosting | 0.000312 | 0.000808 |
 
-Untuk memudahkan, mari kita plot metrik tersebut dengan bar chart.
+Table 3
+
+Untuk memudahkan, buatlah plot metrik tersebut dengan bar chart.
 
 ![akurasi image](https://raw.githubusercontent.com/hadiselamethariyanto/red-wine-quality-machine-learning/main/images/akurasi.png)
 _Gambar 17_
 
-Dari gambar diatas kitab isa melihat bahwa model Random Forest (RF) memiliki nilai error paling kecil dengan tingkat akurasi yang baik, disusul dengan model Boosting. Sedangkan model KNN memiliki nilai error yang tinggi dan tingkat akurasi yang kurang baik.
+Dari gambar 17, bisa dilihat bahwa model Random Forest (RF) memiliki nilai error paling kecil dengan tingkat akurasi yang baik, disusul dengan model Boosting. Sedangkan model KNN memiliki nilai error yang tinggi dan tingkat akurasi yang kurang baik.
 
 Model-model tersebut kemudian diuji dengan beberapa data dari dataset untuk mengetahui akurasi model tersebut.
 
@@ -251,4 +267,6 @@ Model-model tersebut kemudian diuji dengan beberapa data dari dataset untuk meng
 | --- | ------ | ------------ | ----------- | ----------------- |
 | 211 | 6      | 5.0          | 6.0         | 6.1               |
 
-Pada gambar diatas terlihat bahwa model Random Forest (RF) memberikan nilai yang sama dengan nilai aslinya, sedangkan model Boosting memberikan nilai dengan selisih sedikit, dan untuk model KNN memiliki nilai yang cukup jauh berbeda.
+table 4
+
+Pada table 4 terlihat bahwa model Random Forest (RF) memberikan nilai yang sama dengan nilai aslinya, sedangkan model Boosting memberikan nilai dengan selisih sedikit, dan untuk model KNN memiliki nilai yang cukup jauh berbeda.
